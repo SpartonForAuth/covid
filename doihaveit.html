@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Corona Test</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleshomepage.css">
+    <link rel="stylesheet" href="doihaveit.css">
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#" style="font-weight:bold;padding-left:20px">Covid-19</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span class="navul">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="precautions.html"><span class="navul">Precautions</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="active nav-link disabled" href="#"><span class="navul">Do I have Covid?</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html"><span class="navul">Search Country wide</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-displayer">
+            <div class="timer-page">
+
+                <div class="timer-area" style="position: relative;">
+                    <img src="loading.gif">
+                </div>
+                <div>
+
+                    <h2>Take Your Time and fill correct answers to get Better results..
+                        We don't track you and your answers.....
+                    </h2>
+                </div>
+            </div>
+            <div class="no-corona">
+
+
+                <h2>You Dont have Corona..
+                    Take safety measures and
+                    follow the precautions ....Stay Home Stay Safe</h2>
+                <a class="btn btn-info" href="precautions.html">precautions</a>
+
+            </div>
+            <div class="has-corona">
+
+                <h2>You might have Corona symptoms..
+                    Don't Panic..Consult a medical team nearby ..Or call your area's CORONA helpline numbers .... Your safety is also others Safety</h2>
+                <a class="btn btn-info" href="doihaveit.html">Retake Test</a>
+
+            </div>
+
+            <div class="just-loading" style="text-align: center">
+                <div>
+                    <img src="loading.gif">
+                    <h1>Analyzing the Data</h1>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="question-container"></div>
+        <div class="submit-button">
+            <button type="button" class="btn btn-primary">submit</button>
+        </div>
+
+
+
+
+    </header>
+
+    <footer>
+
+<!--                <p>created with ❤❤❤</p>-->
+    </footer>
+
+
+
+    <script id="question-template1" type="text/html">
+        <div class="question-box">
+            <div class="question">
+                <h2>{{question}}</h2>
+            </div>
+            <div class="options">
+                <div class="btn-group" data-toggle="buttons">
+                    {{#options}}
+                        <label class="btn btn-primary {{active}}">
+                            <input type="radio" name="options" id="{{qid}} option {{id}}" {{checked}}>{{value}}
+                        </label>
+                    {{/options}}
+                </div>
+            </div>
+
+        </div>
+    </script>
+
+    <script id="question-template2" type="text/html">
+        <div class="question-box" style="background-image: radial-gradient( circle farthest-corner at -2.9% 119.3%,  rgba(0,47,73,1) 0%, rgba(39,169,255,1) 100.7% );color:white;
+                                         border-radius:10px;">
+            <div class="question">
+                <h2>{{question}}</h2>
+            </div>
+            <div class="options">
+                <div class="btn-group" data-toggle="buttons">
+                    {{#options}}
+                        <label class="btn btn-light {{active}}">
+                            <input type="radio" name="options" id="{{qid}} option {{id}}" {{checked}}>{{value}}
+                        </label>
+                    {{/options}}
+                </div>
+            </div>
+
+        </div>
+    </script>
+
+
+
+
+
+
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js></script>
+    <script src="doihaveit.js"></script>
+
+
+
+
+</body></html>

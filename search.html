@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Search Cases</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleshomepage.css">
+    <link rel="stylesheet" href="search.css">
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#" style="color:black;font-weight: bold;padding-left:20px">Covid-19</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span class="navul">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="precautions.html"><span class="navul">Precautions</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doihaveit.html"><span class="navul">Do I have Covid?</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="active nav-link disabled" href="#"><span class="navul">Search Country wide</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="title-section search-section">
+
+            <div>
+                <h2 class="heading">
+                    Search by Country <span class="country-name"></span></h2>
+            </div>
+
+            <form>
+                <input class="search-bar" placeholder="Enter the country name">
+                <button class="search-button">search</button>
+            </form>
+
+        </div>
+
+
+    </header>
+
+
+
+    <div class="info-section">
+                    
+        
+        <div class="loading-gif">
+            <img src="loading.gif" alt="Loading...">
+        </div>
+        <div class="row" >
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+
+                <div class="two info-card">
+
+                    <h4>Total Cases</h4>
+                    <h2 class="totalcases">...</h2>
+                    <p>Total cases registered by now</p>
+                </div>
+
+            </div>
+            
+                        <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+                <div class="two info-card">
+
+                    <h4>Active Cases</h4>
+                    <h2 class="activecases">...</h2>
+                    <p>Total cases recovered by now</p>
+                </div>
+            </div>
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+
+                <div class="one info-card">
+
+                    <h4>Deaths</h4>
+                    <h2 class="died">...</h2>
+                    <p>Total Number of people died by now</p>
+                </div>
+
+
+            </div>
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+                <div class="three info-card">
+
+                    <h4>Recovered</h4>
+                    <h2 class="recovered">...</h2>
+                    <p>Total cases recovered by now</p>
+                </div>
+            </div>
+
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+
+                <div class="two info-card">
+
+                    <h4>New Cases</h4>
+                    <h2 class="newcases">...</h2>
+                    <p>Total Number of cases appeared just</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+
+                <div class="one info-card">
+
+                    <h4>Critical</h4>
+                    <h2 class="critical">...</h2>
+                    <p>Total Number of people in critical stage</p>
+                </div>
+
+            </div>
+            <div class="info-card-col col-lg-3 col-md-4 col-sm-6">
+
+                <div class="three info-card">
+
+                    <h4>Total Tests</h4>
+                    <h2 class="tests">...</h2>
+                    <p>Total Number of people tested by now</p>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+<!--
+    <footer>
+
+        <p>created with ❤❤❤</p>
+    </footer>
+-->
+
+
+    <script src="search.js"></script>
+
+
+</body></html>

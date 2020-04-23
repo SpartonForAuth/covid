@@ -1,0 +1,141 @@
+
+body{
+}
+.question-container{
+    padding-top:8%;
+
+}
+.navbar{
+    z-index: 990;
+}
+.question-box{
+    width:90%;
+    margin: 0 auto;
+    padding:0 4%;
+
+/*    background-color:grey;*/
+/*    margin-bottom: 10px;*/
+    
+}
+.question h2{
+
+font-size: 150%;
+}
+.question{
+    min-height: 150px;
+    margin:0px;
+    display: flex;
+    align-items: center;
+    padding:0 2%;
+}
+
+.options{
+    padding: 0 2% 4%;
+}
+.btn-group{
+    display: block;
+}
+.btn{
+    min-width:150px;
+    border-radius: 0px;
+}
+
+.submit-button{
+    width:80%;
+    margin:20px auto;
+    text-align: center;
+}
+
+
+input{
+    display: none;    
+}
+
+
+/*timer*/
+
+.content-displayer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.timer-page{
+    width:100%;
+    padding:0 20%;
+    text-align: center;
+}
+.timer-page h2{
+    z-index: 22;
+    font-size: 225%;
+}
+.timer-area{
+    position: relative;
+}
+
+
+/*no corona*/
+.no-corona, .has-corona{
+    padding:0 20%;
+   text-align: center;  
+}
+.no-corona ,.has-corona a{
+    margin-top:20px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/*Media Queries*/
+
+/*laptops and desktops*/
+@media only screen and (min-width:1200px) {
+
+.question-box{
+    width:80%;
+    }
+}
+
+/*potrait mode for tabs*/
+@media only screen and (max-width:1023px) {
+    
+    .question-box{
+            padding:0 4% 4%;
+    }
+
+}
+
+/*tabs*/
+@media only screen and (max-width:767px) {
+        .question-box{
+            padding:0 4% 4%;
+    }
+
+}
+
+/*normal phones*/
+@media only screen and (max-width:480px) {
+    * {
+        font-size: 15px;
+    }
+.question h2{
+
+font-size: 120%;
+}
+    .navul {
+        font-size: 130%;
+    }
+    .btn{
+    min-width:100px;
+}
+}
+
+
+.hide-all{
+    display: none;
+}
+

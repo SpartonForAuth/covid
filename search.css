@@ -1,0 +1,87 @@
+.info-section .row {
+    width: 90%;
+}
+
+
+form {
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+
+.search-bar {
+    width: 80%;
+    height: 50px;
+    border: none;
+    padding-left: 20px;
+}
+
+.search-button {
+    width: 20%;
+    border: none;
+
+}
+
+.country-name {
+    font-size: 100%;
+}
+
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.heading {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.country-name {
+    color: blue;
+    font-weight: bold;
+}
+
+/*Media Queries*/
+
+/*laptops and desktops*/
+@media only screen and (min-width:1200px) {
+    form {
+        width: 50%;
+    }
+
+}
+
+/*potrait mode for tabs*/
+@media only screen and (max-width:1023px) {
+    
+    .title-section h2{
+        margin-bottom: 20px;
+    }
+}
+
+/*tabs*/
+@media only screen and (max-width:767px) {}
+
+/*normal phones*/
+@media only screen and (max-width:480px) {
+    * {
+        font-size: 15px;
+    }
+
+    .search-bar {
+        height: 40px;
+    }
+
+    .navul {
+        font-size: 130%;
+    }
+}
+
+
+
+.hide-all {
+    display: none;
+}

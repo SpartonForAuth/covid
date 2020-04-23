@@ -1,0 +1,102 @@
+
+body{
+    
+}
+.precautions-section{
+    width:100%;
+}
+.precaution-box{
+    padding:0 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+/*    background-color:silver;*/
+/*    margin:0 10px 10px 10px;*/
+/*    border-radius: 10px;*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+
+
+
+
+
+.precaution-heading{
+    padding:0 4%;
+    height: 40vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    
+}
+.precaution-heading h2{
+    font-weight: 900;
+    font-size:400%;
+    text-transform: uppercase;
+}
+.precaution-matter{
+    padding:0 4%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.precaution-matter li{
+    list-style: none;
+}
+
+
+@media only screen and (min-width:1200px) {
+    
+}
+/*potrait mode for tabs*/
+@media only screen and (max-width:1023px) {
+    *{
+        font-size:15px;
+    }
+    .precautions-section{
+        padding-top:20px;
+}
+/*tabs*/
+@media only screen and (max-width:767px) {
+    
+}
+/*normal phones*/
+@media only screen and (max-width:480px) {
+    *{
+        font-size:15px;
+    }
+    body{
+        margin-right:-1px;
+    }
+}
+
+    
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+/*
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+*/
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
