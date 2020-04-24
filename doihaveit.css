@@ -69,7 +69,7 @@ input{
 }
 .timer-page h2{
     z-index: 22;
-    font-size: 225%;
+    font-size: 200%;
 }
 .timer-area{
     position: relative;
@@ -85,7 +85,14 @@ input{
     margin-top:20px;
     text-transform: uppercase;
 }
-
+.no-corona ,.has-corona h2{
+    font-size: 200%;
+    line-height: 1.5;
+}
+strong{
+    font-size: 100%;
+    color:#ea6227;
+}
 
 
 
@@ -131,6 +138,10 @@ font-size: 120%;
     }
     .btn{
     min-width:100px;
+}
+    .no-corona ,.has-corona h2{
+    font-size: 150%;
+        line-height: 1.4;
 }
 }
 

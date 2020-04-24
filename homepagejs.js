@@ -19,7 +19,7 @@ fetch("https://api.covid19api.com/world/total").then((resp) => resp.json())
             i=i*2;
             if (i > obj.TotalConfirmed) {
                 clearInterval(a);
-                totalcases.textContent = obj.TotalConfirmed;
+                totalcases.textContent = parseInt(obj.TotalConfirmed).toLocaleString('en-IN') ;
 
             }
         }, 50)
@@ -28,7 +28,7 @@ fetch("https://api.covid19api.com/world/total").then((resp) => resp.json())
             k=k*2;
             if (k > obj.TotalDeaths) {
                 clearInterval(b);
-                died.textContent = obj.TotalDeaths;
+                died.textContent = parseInt(obj.TotalDeaths).toLocaleString('en-IN') ;
 
             }
         }, 50)
@@ -37,10 +37,11 @@ fetch("https://api.covid19api.com/world/total").then((resp) => resp.json())
             j=j*2;
             if (j > obj.TotalConfirmed) {
                 clearInterval(c);
-                recovered.textContent = obj.TotalRecovered;
+                recovered.textContent =parseInt(obj.TotalRecovered).toLocaleString('en-IN') ;
 
             }
         }, 50)
+        
 
     })
     .catch(function (error) {

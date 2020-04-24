@@ -23,7 +23,7 @@ let start = () => {
     const questiontemplate1 = document.querySelector('#question-template1').innerHTML;
     const questiontemplate2 = document.querySelector('#question-template2').innerHTML;
 
-    const nocoronadata = [[3], [1, 2], [4], [1], [2], [1]]
+    const nocoronadata = [[3], [1, 2], [4], [1], [2], [1,2]]
 
     const data = [
         {
@@ -158,6 +158,10 @@ let start = () => {
         let option = e.target.id.split(" ")
         ques = parseInt(option[0]);
         res[ques] = parseInt(option[2])
+        
+//    $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+//       $('html, body').stop();
+//   });
 
         const qbox = e.target.parentNode.parentNode.parentNode
             .parentNode
@@ -166,14 +170,16 @@ let start = () => {
         let a = $(qbox).offset().top - $(window).scrollTop();
         
         if(a<0){
-                        $('html, body').animate({
+                    $('html, body').animate({
                 scrollTop:window.pageYOffset + qbox.offsetHeight +a
             }, 1000);
         }else{
             
             $('html, body').animate({
                 scrollTop:window.pageYOffset+qbox.offsetHeight
-            }, 1000);
+            }, 1000,function(){
+       $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+   });
         }
 
 
@@ -195,7 +201,7 @@ let start = () => {
                 count++;
             }
         }
-        if (count > 4) {
+        if (count >= 4) {
             nocorona.classList.remove("hide-all")
             hascorona.classList.add("hide-all")
         } else {

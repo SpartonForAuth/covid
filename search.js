@@ -1,5 +1,5 @@
 let info = document.querySelector(".info-section");
-info.classList.add("hide-all")
+info.classList.add("hide-all") 
 let totalcases = document.querySelector(".totalcases");
 let died = document.querySelector(".died")
 let recovered = document.querySelector(".recovered")
@@ -57,7 +57,7 @@ let funmake = (card,limit)=>{
             i=i*2;
             if (i > limit) {
                 clearInterval(a);
-                card.textContent = limit;
+                card.textContent = parseInt(limit).toLocaleString('en-IN') ;;
 
             }
         }, 50)
