@@ -1,17 +1,20 @@
 const contentholder = document.querySelector(".content-displayer");
+contentholder.classList.add("hide-all");
 const container = document.querySelector(".question-container");
 const submit = document.querySelector(".submit-button button");
 const nocorona = document.querySelector(".no-corona")
 const hascorona = document.querySelector(".has-corona")
 const timerpage = document.querySelector(".timer-page")
 const analy = document.querySelector(".just-loading")
+const body = document.querySelector("body")
+//just make an error here to solve next
 
 analy.classList.add("hide-all")
 nocorona.classList.add("hide-all");
-hascorona.classList.add("hide-all")
-
-container.classList.add("hide-all")
-submit.classList.add("hide-all")
+hascorona.classList.add("hide-all");
+container.classList.add("hide-all");
+submit.classList.add("hide-all");
+contentholder.classList.remove("hide-all")
 let start = () => {
     contentholder.classList.add("hide-all");
     container.classList.remove("hide-all");
@@ -129,8 +132,7 @@ let start = () => {
 
 
     let res = new Array(data.length);
-    res[0] = 2
-    res[1] = 1
+    res=[1,0,0,0,0,0]
 
     data.forEach((obj, i) => {
         let html;
@@ -150,11 +152,37 @@ let start = () => {
         container.insertAdjacentHTML('beforeend', html)
     })
 
+    
 
     $('input').on("click", (e) => {
         let option = e.target.id.split(" ")
         ques = parseInt(option[0]);
         res[ques] = parseInt(option[2])
+
+        const qbox = e.target.parentNode.parentNode.parentNode
+            .parentNode
+
+        
+        let a = $(qbox).offset().top - $(window).scrollTop();
+        
+        if(a<0){
+                        $('html, body').animate({
+                scrollTop:window.pageYOffset + qbox.offsetHeight +a
+            }, 1000);
+        }else{
+            
+            $('html, body').animate({
+                scrollTop:window.pageYOffset+qbox.offsetHeight
+            }, 1000);
+        }
+
+
+
+
+
+
+
+
     })
 
     const checkDisease = () => {
