@@ -142,7 +142,7 @@ let start = () => {
                 question: data[i].question,
                 options: data[i].options
             })
-        } else {
+        } else { 
             html = Mustache.render(questiontemplate2, {
                 qid: data[i].qid,
                 question: data[i].question,

@@ -12,9 +12,31 @@ let critical = document.querySelector(".critical");
 let countryname = document.querySelector(".country-name");
 let loader = document.querySelector(".loading-gif")
 
+
+const listscript = document.querySelector("#listofc");
+const listholder = document.querySelector(".listholder");
+
+
 loader.classList.add("hide-all")
 row.classList.add("hide-all");
 countryname.classList.add("hide-all")
+
+
+fetch("https://covid-193.p.rapidapi.com/countries", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "covid-193.p.rapidapi.com",
+		"x-rapidapi-key": "1781c610c0mshbd6c983e8a64db9p16444ejsnab6727330783"
+	}
+})
+.then(response => response.json()).then(data=>{
+    let html="";
+    for(let i = 0 ; i< data.response.length; i++){
+        html+=`<option value="${data.response[i]}">`
+    }
+    listholder.innerHTML =  html
+})
+
 
 let clearall = () => {
     totalcases.textContent = "..."
