@@ -5,7 +5,7 @@
 
 form {
     width: 80%;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     border: 1px solid black;
     overflow: hidden;
@@ -22,7 +22,7 @@ form {
 .search-button {
     width: 20%;
     border: none;
-
+    border-radius: 0px;
 }
 
 .country-name {
@@ -51,7 +51,6 @@ input::-webkit-calendar-picker-indicator {
     form {
         width: 50%;
     }
-
 }
 
 /*potrait mode for tabs*/

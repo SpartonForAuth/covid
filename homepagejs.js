@@ -12,8 +12,8 @@ fetch("https://api.covid19api.com/world/total").then((resp) => resp.json())
     .then(function (data) {
         let obj = data
         let i=1;
-    let j=1;
-    let k=1;
+        let j=1;
+        let k=1;
         var a = setInterval(() => {
             totalcases.textContent = i;
             i=i*2;
